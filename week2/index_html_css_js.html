@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Site</title>
+</head>
+<body>
+  <h1 style="text-align: center; color:blue;"
+    id="main_h">
+    Hello, World!
+  </h1>
+
+  <p style="text-align: center;"
+    id="test_p"
+    onmouseover="setBigSize()"
+    onmouseleave="setNormalSize()">
+    I'm testing my web page!!!! </p>
+  <p id="target_p" style="background-color: lime;"
+    onmouseover="setColorGreen()"
+    onmouseleave="setColorBlack()">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
+     Quis reprehenderit officia laudantium eaque provident, <br>
+     nulla cumque. Consectetur, eos facilis temporibus <br>
+     placeat reiciendis obcaecati? Dolorem voluptatibus, <br>
+     unde accusamus nisi culpa praesentium!
+  </p>
+  <hr>
+  <h3 style="text-align: center;" 
+      onclick="alert('Email me at: mymail@gmail.com')">
+      Click me!
+  </h3>
+</body>
+<script>
+  setInterval(blinkingHeader, 1000);
+  function blinkingHeader(){
+    var main_h = document.getElementById("main_h");
+    var main_color = main_h.style.color
+    if (main_color == 'blue')
+      main_h.style.color = "red";
+    else
+      main_h.style.color = "blue";
+  }
+  function setBigSize(){
+    var test_p = document.getElementById("test_p");
+    test_p.style.fontSize = "24px";
+    //test_p.style.backgroundColor = 'black';
+  }
+  function setNormalSize(){
+    var test_p = document.getElementById("test_p");
+    test_p.style.fontSize = "16px";
+    //test_p.style.backgroundColor = 'lime';
+  }
+
+  function setColorGreen(){
+    var target_p = document.getElementById("target_p");
+    target_p.style.color = 'lime';
+    target_p.style.backgroundColor = 'black';
+  }
+  function setColorBlack(){
+    var target_p = document.getElementById("target_p");
+    target_p.style.color = 'black';
+    target_p.style.backgroundColor = 'lime';
+  }
+</script>
+</html>
