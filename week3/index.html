@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Site</title>
+</head>
+<body>
+
+  <h1>Lecture 3: Essential HTML elements</h1>
+
+  <h2>HTML Content Model</h2>
+  <div> I'm testing my web page!!!!</div><span>Added an inline SPAN content. </span>
+  <strong>Added some BOLD content</strong>
+  <a href="#history">Some URL</a>
+  <br><br>
+  <div>
+    Lorem ipsum dolor, <strong> sit amet consectetur</strong> adipisicing elit. 
+     Quis reprehenderit officia laudantium eaque provident, 
+     <a href="#history"> nulla cumque</a>.
+     <div> <strong> Some other block-level content </strong></div>
+     Consectetur, eos facilis temporibus 
+     placeat reiciendis obcaecati? Dolorem voluptatibus, 
+     unde accusamus nisi&nbsp;culpa&nbsp;praesentium!
+  </div>
+  <span>This is a SPAN content. <div>Some other block content</div> 
+  You cannot put inside a block-level element</span>
+  <a href="https://validator.w3.org/#validate_by_input">Validate HTML</a>
+
+  <hr>
+  <hr>
+
+  <!--H1 vs DIV-->
+  <h2 id="history">H1 vs DIV</h2>
+  <h1>Hello, World!</h1>
+  <div style="font-size: 32px; font-weight: bold;">Hello, World!</div>
+
+  <p>Lorem ipsum dolor sit amet consectetur, <br>
+    adipisicing elit. Odit impedit asperiores in voluptatibus vero,  <br> 
+    et deleniti. Nemo est id omnis illo laboriosam eum? <br>
+    Ullam commodi dignissimos excepturi maiores expedita ratione.
+  </p>
+
+  <p>Lorem ipsum dolor sit amet consectetur, <br>
+    adipisicing elit. Odit impedit asperiores in voluptatibus vero,  <br> 
+    et deleniti. Nemo est id omnis illo laboriosam eum? <br>
+    Ullam commodi dignissimos excepturi maiores expedita ratione.
+  </p>
+  <hr>
+  <hr>
+
+<h2>Semantic tags</h2>
+<!-- Semantic sections -->
+
+<section>
+  <h3>Semantic tags</h3>
+
+  <article>Lorem ipsum dolor sit amet consectetur, <br>
+      adipisicing elit. Odit impedit asperiores in voluptatibus vero,  <br> 
+      et deleniti. Nemo est id omnis illo laboriosam eum? <br>
+      Ullam commodi dignissimos excepturi maiores expedita ratione. <br>
+  </article>
+  <br>
+  <article>Lorem ipsum dolor sit amet consectetur, <br>
+      adipisicing elit. Odit impedit asperiores in voluptatibus vero,  <br> 
+      et deleniti. Nemo est id omnis illo laboriosam eum? <br>
+      Ullam commodi dignissimos excepturi maiores expedita ratione.
+  </article>
+</section>
+<hr>
+
+
+<!-- Sections with DIV-->
+  <div>
+    <div style="font-size: 18px; font-weight: bold;"
+    id="my_div">
+      Only DIV tags
+    </div>
+    <br>
+    <div>Lorem ipsum dolor sit amet consectetur, <br>
+    adipisicing elit. Odit impedit asperiores in voluptatibus vero,  <br> 
+    et deleniti. Nemo est id omnis illo laboriosam eum? <br>
+    Ullam commodi dignissimos excepturi maiores expedita ratione.
+    </div>
+    <br>
+
+    <div>Lorem ipsum dolor sit amet consectetur, <br>
+      adipisicing elit. Odit impedit asperiores in voluptatibus vero,  <br> 
+      et deleniti. Nemo est id omnis illo laboriosam eum? <br>
+      Ullam commodi dignissimos excepturi maiores expedita ratione.
+    </div>
+  </div>
+
+
+  <hr>
+  <hr>
+
+  <!-- Links-->
+<h2>Links</h2>
+<a href="#my_div">Page Fragment</a><br>
+<a href="index_html_css.html">Some internal page</a><br>
+<a href="http://w3.org">Some external link</a><br>
+<a href="http://w3.org"><img src="w3.org.png" width="50px"></a><br>
+<a href="mailto:email">Email link</a><br>
+
+<br><br>
+<div>
+  Use <strong>target</strong> attrbute of &lt;a&gt; tag to:
+  <ul>
+    <li>open in <a href="index_html_css.html" target="_blank">new window</a></li>
+    <li>open in <a href="index_html_css.html" target="_self">current window</a> </li>
+  </ul>
+</div>
+
+  <hr>
+  <hr>
+
+<!-- Semantic tags and Menu-->
+ <header>
+   <h4>Header</h4>
+   <nav>
+     <h5>Menu with Lists</h5>
+     <ul>
+       <li><a href="#history">Menu Item 1</a></li>
+       <li><a href="index_html_css.html">Menu Item 2</a></li>
+       <li><a href="https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html#content-models 
+" target="_blank">Menu Item 3</a></li>
+     </ul>
+   </nav>
+ </header>
+
+ <section>
+   <h4>Section</h4>
+  <p>Lorem ipsum dolor sit amet consectetur, <br>
+    adipisicing elit. Odit impedit asperiores in voluptatibus vero,  <br> 
+    et deleniti. Nemo est id omnis illo laboriosam eum? <br>
+    Ullam commodi dignissimos excepturi maiores expedita ratione.
+  </p>
+
+  <p>Lorem ipsum dolor sit amet consectetur, <br>
+   adipisicing elit. Odit impedit asperiores in voluptatibus vero,  <br> 
+   et deleniti. Nemo est id omnis illo laboriosam eum? <br>
+   Ullam commodi dignissimos excepturi maiores expedita ratione.
+  </p>
+
+  <p>Lorem ipsum dolor sit amet consectetur, <br>
+   adipisicing elit. Odit impedit asperiores in voluptatibus vero,  <br> 
+   et deleniti. Nemo est id omnis illo laboriosam eum? <br>
+   Ullam commodi dignissimos excepturi maiores expedita ratione.
+  </p>
+</section>
+
+<aside>
+  <h4>Aside</h4>
+  <p>Lorem ipsum dolor sit amet consectetur, <br>
+   adipisicing elit. Odit impedit asperiores in voluptatibus vero,  <br> 
+   et deleniti. Nemo est id omnis illo laboriosam eum? <br>
+   Ullam commodi dignissimos excepturi maiores expedita ratione.
+  </p>
+</aside>  
+<hr>
+
+<footer>
+  <h4>Footer</h4>
+  <p>Lorem ipsum dolor sit amet consectetur, <br>
+   adipisicing elit. Odit impedit asperiores in voluptatibus vero,  <br> 
+   et deleniti. Nemo est id omnis illo laboriosam eum? <br>
+   Ullam commodi dignissimos excepturi maiores expedita ratione.
+  </p>
+</footer>
+
+<hr>
+<hr>
+<h2>Images</h2>
+<img src="_w3.org.png" width="200px" height="100px" alt="W3.org's logo">
+<img src="_w3.org.png" width="200px" height="50px" >
+<img src="w3.org.png" width="200px" height="50px">
+<img src="w3.org.png" width="200px">
+<img src="w3.org.png">
+<hr>
+<hr>
+
+<h2>Escape Characters</h2>
+
+There are 3 main charactes to be escaped:
+<ul>
+  <li>use &amp;lt; to escape &lt; symbol </li>
+  <li>use &amp;gt; to escape &gt; symbol </li>
+  <li>use &amp;amp; to escape &amp; symbol </li>
+</ul>
+
+Useful escape symbols:
+<ul>
+  <li>&amp;quot; (&quot;)  - to make a quotation </li>
+<li> &amp;nbsp;  (&nbsp;) - to&nbsp;insert&nbsp;non-breaking&nbsp;space</li>
+<li>&amp;copy(&copy) – copyright symbol</li>
+
+</ul>
+
+
+</body>
+</html>
