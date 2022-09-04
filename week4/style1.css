@@ -1,0 +1,17 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: red;
+  font-size: 18pt;
+}
+
+li {
+  color: purple;
+}
+
+.second {
+  color: yellow;
+}

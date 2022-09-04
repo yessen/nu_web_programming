@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Example</title>
+  <!-- External style sheet -->
+  <link rel="stylesheet" href="style1.css">
+
+  <!-- Internal styles-->
+  <style>
+    h1 {
+      color: gray;
+    }
+    p {
+      color: blue;
+      font-weight: bold;
+    }
+    
+    li[name] {
+      color: gray;
+    }
+    li[name="item1"] {
+      color: orange;
+    }
+    .second {
+      color: red;
+    }
+    .item {
+      color: lime;
+    }
+
+    h1[style] {
+      text-align: center;
+    }
+    li {
+      color: purple;
+    }
+
+  </style>
+
+</head>
+<body>
+  <!-- Inline style -->
+  <h1 style="color: green;">
+    Hello, World!
+  </h1>
+
+  <p>Paragraph 1</p>
+
+  <p class="second">Paragraph 2
+    <ul>
+      <li name="item1">Item1</li>
+      <li class="second item2">Item2</li>
+      <li name="item3">Item3</li>
+      <li>Item4</li>
+    </ul>
+  </p>
+
+  <p id="last">Paragraph 3</p>
+</body>
+</html>
