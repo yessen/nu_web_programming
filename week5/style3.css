@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  font-size: 18pt;
+}
+
+header {
+  border: 3px solid red;
+}
+
+nav {
+  border: 3px solid lime;
+}
+
+section {
+  display: flex;
+  border: 3px solid red;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+p {
+  border: 3px solid green;
+}
+
+.first {
+  width: 25%;
+}
+
+.second {
+  width: 50%;
+}
+
+.third {
+  width: 25%;
+}
+
+ul {
+  border: 3px solid blue;
+}
+
+footer {
+  border: 3px solid green;
+}
+
+div {
+  border: 3px solid black;
+}
