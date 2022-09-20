@@ -1,10 +1,11 @@
 * {
   box-sizing: border-box;
-
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-size: 18pt;
+  font-size: 1.2em;
 }
 
 header {
@@ -12,11 +13,84 @@ header {
   border: 3px solid red;
 }
 
+/* Navigation */
 nav {
-  background-color: lime;
-  border: 3px solid lime;
+  position: relative;
+  color: white;
+  background-color: black;
+  border: 3px solid brown;
 }
 
+#hamburger {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hamburger-icon {
+  display: inline-block;
+  padding-left: .5em;
+  padding-right: .5em;
+  background-color: rgb(165, 14, 14);
+}
+
+.hamburger-icon::before {
+  /* Hamburger icon codes: 
+    HTML - #9776
+    CSS - \2630 */
+  content: "\2630";
+}
+
+.nav-toggle {
+  display: none;
+  width: 100%;
+  list-style-type: none;
+  text-align: center;
+  border: 3px solid blue;
+  background-color: black;
+}
+
+.nav-toggle li {
+  width: 100%;
+}
+
+.nav-toggle a {
+  display: inline-block;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-toggle a:hover {
+  background-color: rgb(165, 14, 14);
+}
+
+/* Key component */
+#hamburger:checked~.nav-toggle {
+  display: block;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.5em;
+  }
+
+  .nav-toggle,
+  #hamburger:checked~.nav-toggle {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+  #hamburger,
+  .hamburger-icon {
+    display: none;
+  }
+}
+
+/* Main content */
 section {
   display: flex;
   flex-wrap: wrap;
@@ -31,6 +105,8 @@ h2 {
 p {
   border: 3px solid green;
 }
+
+/* Flexbox approach */
 
 /* Mobile-first layout */
 .first {
@@ -85,24 +161,6 @@ p {
   }
 }
 
-ul {
-  display: flex;
-  justify-content: space-evenly;
-  list-style-type: none;
-  border: 3px solid blue;
-}
-
-li {}
-
-footer {
-  background-color: lightgoldenrodyellow;
-  border: 3px solid green;
-}
-
-div {
-  border: 3px solid black;
-}
-
 /* Grid View */
 .row::after {
   content: "";
@@ -116,9 +174,8 @@ div {
   width: 100%;
 }
 
+/* For tablets: */
 @media screen and ((min-width: 768px) and (max-width: 1023px)) {
-
-  /* For tablets: */
   .col-s-1 {
     width: 8.33%;
   }
@@ -168,9 +225,8 @@ div {
   }
 }
 
+/* For desktop: */
 @media screen and (min-width: 1024px) {
-
-  /* For desktop: */
   .col-1 {
     width: 8.33%;
   }
@@ -217,5 +273,34 @@ div {
 
   .col-12 {
     width: 100%;
+  }
+}
+
+footer {
+  background-color: lightgoldenrodyellow;
+  border: 3px solid green;
+}
+
+div {
+  border: 3px solid black;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  list-style-type: none;
+}
+
+footer li {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  footer ul {
+    flex-wrap: nowrap;
   }
 }
