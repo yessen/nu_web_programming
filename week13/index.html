@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--
+    <nav>
+      <h1 id="hello">John Smith</h1>
+      <ul>
+        <li><a id="resume" class="a-nav" onclick="showResume()">Resume</a></li>
+        <li>
+          <a id="project" class="a-nav" href="projects.html">Projects</a>
+        </li>
+      </ul>
+    </nav>
+    -->
+    <nav id="nav"></nav>
+
+    <main id="main">
+      <h2 id="title" onclick="this.style.color = 'red'">Inline Events</h2>
+
+      <p
+        id="text1"
+        onmouseenter="style='background-color: yellow'"
+        onmouseout="style='background-color: white'"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+        obcaecati, soluta repellat esse maiores tenetur in itaque minima sit
+        totam id quod excepturi asperiores recusandae eligendi laboriosam
+        voluptatum atque aperiam?
+      </p>
+
+      <p id="text2" onclick="changeFont(this)">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+        ipsum! Eos, labore? Nihil dignissimos soluta nemo aspernatur impedit
+        voluptates, libero consequuntur aliquam officia illum similique suscipit
+        rerum vel perferendis iure.
+      </p>
+      <label for="caps">NAME</label>
+      <input type="text" id="caps" onkeyup="upperCase()" />
+    </main>
+
+    <script src="main.js"></script>
+    <script>
+      function changeFont(el) {
+        let p = el;
+        p.style.fontSize = "16pt";
+        p.style.color = "white";
+        p.style.backgroundColor = "black";
+      }
+
+      function upperCase() {
+        const x = document.getElementById("caps");
+        x.value = x.value.toUpperCase();
+      }
+    </script>
+  </body>
+</html>
