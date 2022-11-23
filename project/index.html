@@ -3,6 +3,19 @@
   <head>
     <title>Home Page</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- FontAwesome -->
+    <link
+      href="../resources/fontawesome-6.2.1/css/fontawesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../resources/fontawesome-6.2.1/css/brands.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../resources/fontawesome-6.2.1/css//solid.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -10,23 +23,45 @@
 
     <!-- Content part -->
     <main id="content">
-      <div class="grid-container">
-        <div class="grid-item item1">1</div>
-        <div class="grid-item item2">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
+      <div class="intro">
+        <div class="intro-item photo">
+          <img src="images/person.png" alt="" />
+        </div>
+        <div class="intro-item info">
+          <h2 class="about_me">about me</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+            expedita suscipit blanditiis laboriosam libero dolore atque! Cum,
+            dignissimos eos delectus deleniti ratione quae non obcaecati
+            doloremque sapiente modi, recusandae molestias!
+          </p>
+          <a href="about.html">more...</a>
+        </div>
       </div>
 
-      <div class="grid-container2 reveal">
-        <div class="grid-item item3">1</div>
-        <div class="grid-item item4 rain-fall">2</div>
-        <div class="grid-item item5 rain-fall">3</div>
-        <div class="grid-item item6 rain-fall">4</div>
+      <div class="grid-container">
+        <div class="grid-item item1 gap-resize">1</div>
+        <div class="grid-item item2 gap-resize">2</div>
+        <div class="grid-item gap-resize">3</div>
+        <div class="grid-item gap-resize">4</div>
+      </div>
+
+      <div class="grid-container2">
+        <div class="grid-item item3">Key Skills</div>
+        <div class="grid-item item4 rain-fall">
+          <a href="#">HTML5</a>
+        </div>
+        <div class="grid-item item5 rain-fall">
+          <a href="#">CSS3</a>
+        </div>
+        <div class="grid-item item6 rain-fall">
+          <a href="#">JavaScript</a>
+        </div>
       </div>
     </main>
 
-    <!-- Social -->
-    <footer id="social"></footer>
+    <!-- FOOTER -->
+    <footer id="footer"></footer>
 
     <!-- My JavaScript code -->
     <script src="main.js"></script>

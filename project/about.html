@@ -5,32 +5,233 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Listeners</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css" />
+    <style>
+      #about-main {
+        margin-top: 100px;
+      }
+      .carousel-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
   </head>
   <body>
-    <nav id="nav"></nav>
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">John&nbsp;Smith</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../pages/projects.html"
+                >MyProjects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/thoughts.html">MyThoughts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">AboutMe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/contacts.html">ContactMe</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <main id="listeners">
-      <h1 id="title">About Me</h1>
+    <main id="about-main" class="container text-center">
+      <div class="container intro">
+        <div class="row">
+          <div class="col-12 col-md-4 photo">
+            <img src="images/person.png" alt="" />
+          </div>
+          <div class="col-12 col-md-8 info">
+            <h2 class="about_me">about me</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+              expedita suscipit blanditiis laboriosam libero dolore atque! Cum,
+              dignissimos eos delectus deleniti ratione quae non obcaecati
+              doloremque sapiente modi, recusandae molestias!
+            </p>
+          </div>
+        </div>
+      </div>
 
-      <p id="text3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-        obcaecati, soluta repellat esse maiores tenetur in itaque minima sit
-        totam id quod excepturi asperiores recusandae eligendi laboriosam
-        voluptatum atque aperiam?
-      </p>
+      <div class="container education mt-5">
+        <h2>Education</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">#</th>
+              <th scope="col">From</th>
+              <th scope="col">To</th>
+              <th scope="col">Institution</th>
+              <th scope="col">Major</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>09/2022</td>
+              <td>current</td>
+              <td>Stanford University</td>
+              <td>Political Science, MS</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>08/2018</td>
+              <td>07/2022</td>
+              <td>Nazarbayev University</td>
+              <td>Political Science, BS</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>09/2007</td>
+              <td>05/2018</td>
+              <td>Super High Schools</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <p id="text4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-        esse dicta minus eos praesentium molestiae nostrum nulla fugit quaerat
-        placeat. Praesentium harum officia rem quam porro beatae dolorum
-        inventore delectus?
-      </p>
+      <div class="container skills mt-5">
+        <div class="row">
+          <div class="col">
+            <h2>Key Skills</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h3>HTML</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id enim
+              pariatur itaque earum modi explicabo aperiam, officia consequuntur
+              veniam. Itaque quia tenetur aspernatur nisi non. Necessitatibus
+              natus quas vel suscipit?
+            </p>
+          </div>
+          <div class="col">
+            <h3>CSS</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id enim
+              pariatur itaque earum modi explicabo aperiam, officia consequuntur
+              veniam. Itaque quia tenetur aspernatur nisi non. Necessitatibus
+              natus quas vel suscipit?
+            </p>
+          </div>
+          <div class="col">
+            <h3>JavaScript</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id enim
+              pariatur itaque earum modi explicabo aperiam, officia consequuntur
+              veniam. Itaque quia tenetur aspernatur nisi non. Necessitatibus
+              natus quas vel suscipit?
+            </p>
+          </div>
+        </div>
+      </div>
 
-      <label for="caps">NAME</label>
-      <input type="text" id="caps" />
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide mt-5 bg-dark"
+        data-bs-ride="true"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item text-center active">
+            <div class="carousel-slide">
+              <img
+                src="images/nu-1.jpeg"
+                class="d-block w-20"
+                alt="..."
+                height="400px"
+              />
+            </div>
+          </div>
+          <div class="carousel-item text-center">
+            <div class="carousel-slide">
+              <img
+                src="images/nu-2.jpeg"
+                class="d-block w-20"
+                alt="..."
+                height="400px"
+              />
+            </div>
+          </div>
+          <div class="carousel-item text-center">
+            <div class="carousel-slide">
+              <img
+                src="images/nu-3.jpeg"
+                class="d-block w-20"
+                alt="..."
+                height="400px"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </main>
 
-    <script src="main.js"></script>
+    <!-- FOOTER -->
+    <footer id="footer" class="container"></footer>
+
+    <script src="../resources/js/bootstrap.min.js"></script>
   </body>
 </html>

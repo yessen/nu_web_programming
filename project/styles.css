@@ -6,24 +6,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Sticky footer */
-body > footer {
-  position: sticky;
-  top: 100vh;
-}
-
-nav {
-  padding-left: 20px;
-  position: sticky;
-  top: 0;
-  left: 0;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  background-color: black;
-}
-
 #logo {
   display: flex;
   align-items: center;
@@ -31,6 +13,20 @@ nav {
   font-weight: bold;
   color: white;
   text-decoration: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+  z-index: 2;
 }
 
 .a-nav {
@@ -50,10 +46,10 @@ nav {
   color: red;
 }
 
-ul {
+.nav-set {
   margin: 0;
-  padding: 0;
   display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -65,26 +61,116 @@ li {
   align-items: center;
   height: 100%;
 }
-
-main {
-  padding: 20px;
+.checkbox {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  cursor: pointer;
+}
+.hamburger-icon {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  cursor: pointer;
 }
 
-/*** CSS Grid ***/
-.grid-container {
+/** MAIN **/
+main {
+  margin-top: 15vh;
+  padding: 20px;
+  z-index: -1;
+}
+
+/*** CSS Grids ***/
+
+/* FOOTER */
+footer {
+  position: sticky;
+  top: 100vh;
+  height: 20vh;
+  display: grid;
+  grid-template-columns: 50px 50px 50px auto;
+
+  color: white;
+  background-color: black;
+}
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.follow {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+}
+.fb {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.insta {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.git {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+footer a {
+  color: white;
+}
+/*******************************/
+
+/** Intro Grid **/
+.intro {
+  margin-top: 15vh;
   padding: 20px;
   height: 70vh;
   display: grid;
-  /*
-  column-gap: 10px;*/
-  row-gap: 10px;
+  grid-template-columns: 40% auto;
+  column-gap: 10px;
+  background-color: black;
+  z-index: -1;
+}
+
+.intro-item {
+  border-radius: 10px;
+  color: white;
+  overflow: hidden;
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.info {
+  padding: 50px;
+  text-align: center;
+  line-height: 200%;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+/*** Blue and Green Grid Containers **/
+.grid-container {
+  margin-top: 10px;
+  padding: 20px;
+  height: 70vh;
+  display: grid;
   grid-template-columns: auto auto auto;
+  column-gap: 20%;
+  row-gap: 10px;
   background-color: #2196f3;
-  /* animation setup */
-  animation-name: grid-slider;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .grid-container2 {
@@ -98,24 +184,33 @@ main {
   row-gap: 10px;
   grid-template-columns: auto auto auto;
   background-color: #0c7b45;
-  /* animation setup */
-  animation-name: grid-slider2;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+.grid-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.grid-item a:hover {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .item1 {
@@ -126,7 +221,19 @@ main {
   grid-row: 1 / 3;
 }
 
+.grid-container.active {
+  /* animation setup */
+  animation-name: grid-slider;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 .item3 {
+  padding-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   grid-column: 1 / 4;
   grid-row: 1 / 4;
 }
@@ -135,6 +242,9 @@ main {
   position: relative;
   top: -100%;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-column: 1 / 2;
   grid-row: 3 / 4;
   animation-duration: 2s;
@@ -144,6 +254,9 @@ main {
   position: relative;
   top: -100%;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-column: 2 / 3;
   grid-row: 3 / 4;
   animation-duration: 3s;
@@ -153,6 +266,9 @@ main {
   position: relative;
   top: -100%;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-column: 3 / 4;
   grid-row: 3 / 4;
   animation-duration: 4s;
@@ -168,9 +284,20 @@ main {
 @keyframes grid-slider {
   from {
     column-gap: 20%;
+    opacity: 0;
   }
   to {
     column-gap: 10px;
+    opacity: 1;
+  }
+}
+
+@keyframes grid-slider2 {
+  from {
+    column-gap: 10px;
+  }
+  to {
+    column-gap: 20%;
   }
 }
 
@@ -205,6 +332,49 @@ canvas {
 
 /* Mobile mode */
 @media screen and (max-width: 600px) {
+  /** hamburger menu */
+  .nav-set {
+    display: none;
+  }
+  .checkbox {
+    display: none;
+    top: 30px;
+  }
+  nav input:checked ~ .nav-set {
+    padding: 0;
+    width: 200px;
+    position: relative;
+    top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border: 5px solid black;
+  }
+
+  nav li,
+  .a-nav {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hamburger-icon {
+    display: inline-block;
+    padding-left: 0.5em;
+    padding-right: 1.5em;
+    background-color: black;
+  }
+
+  .hamburger-icon::before {
+    /* Hamburger icon codes: 
+    HTML - #9776
+    CSS - \2630 */
+    content: "\2630";
+  }
+
   /* grid-container */
   .grid-container {
     grid-template-columns: auto;
@@ -223,6 +393,8 @@ canvas {
   }
 
   .item3 {
+    padding-left: 20px;
+    justify-content: flex-start;
     grid-column: 1 / 3;
     grid-row: 1 / 3;
   }
